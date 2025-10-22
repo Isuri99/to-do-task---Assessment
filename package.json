@@ -1,0 +1,12 @@
+{
+  "name": "to-do-task---Assessment",
+  "packageManager": "yarn@3.4.1",
+  "version": "1.0.0",
+  "description": "A simple full-stack to-do task web application built with React and SpringBoot.",
+  "repository": "https://github.com/Isuri99/to-do-task---Assessment.git",
+  "author": "Isuri Iddamalgoda <isuriiddamalgoda@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}
