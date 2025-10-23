@@ -1,4 +1,4 @@
-package com.todotask.to_do_backend;
+package com.to_do_backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
