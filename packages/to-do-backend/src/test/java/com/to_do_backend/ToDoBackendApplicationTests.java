@@ -1,4 +1,4 @@
-package com.todotask.to_do_backend;
+package com.to_do_backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
