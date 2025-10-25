@@ -6,6 +6,7 @@
   "repository": "https://github.com/Isuri99/to-do-task---Assessment.git",
   "author": "Isuri Iddamalgoda <isuriiddamalgoda@gmail.com>",
   "license": "MIT",
+  "private": true,
   "workspaces": [
     "packages/*"
   ]
