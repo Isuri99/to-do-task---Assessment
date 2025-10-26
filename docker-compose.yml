@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:8
+    container_name: todo-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3307:3306"
+  backend:
+    build: ./packages/to-do-backend
+    container_name: todo-backend
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+    environment:
+      SERVER_PORT: ${SERVER_PORT}
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+  frontend:
+    build:
+      context: .
+      dockerfile: ./packages/to-do-frontend/Dockerfile
+      args:
+        REACT_APP_Todo_Server_Base_URL: ${REACT_APP_Todo_Server_Base_URL}
+    container_name: todo-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
