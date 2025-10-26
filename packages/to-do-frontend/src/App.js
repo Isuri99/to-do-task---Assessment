@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
-import TasList from "./components/TaskList";
+import TaskList from "./components/TaskList";
 import { getTasks } from "./services/taskService";
 import "./index.css";
 
@@ -33,7 +33,7 @@ function App() {
       </div>
       
       <div className="sticky-section">
-       <TasList tasks={tasks} onTaskUpdated={fetchTasks} />
+       <TaskList tasks={tasks} onTaskUpdated={fetchTasks} />
         <img src="/assets/cactus.png" alt="cactus" className="cactus-img"/>
       </div> 
     </div>
